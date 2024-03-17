@@ -1,0 +1,15 @@
+.home {
+  position: relative;
+}
+.intro {
+  animation: typingEffectAnimation 2.5s steps(30, end);
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
