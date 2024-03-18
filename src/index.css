@@ -92,6 +92,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.custom-radial-gradient {
+  background-image: radial-gradient(circle, #4299e1, transparent 90%);
+}
+
 .eth-card {
   background-color: #a099ff;
   background-image: radial-gradient(
