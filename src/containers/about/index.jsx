@@ -9,11 +9,11 @@ import { FaReact, FaDev, FaJs, FaHtml5, FaCss3Alt, FaPython } from 'react-icons/
 const personalDetails = [
   {
     label: 'Name',
-    value: 'Robert Anthony'
+    value: 'Robert'
   },
   {
     label: 'Age',
-    value: '22'
+    value: '22 years'
   },
   {
     label: 'Country',
@@ -38,8 +38,8 @@ function About() {
   return (
     <section id='about' className='about'>
       <PageHeaderContent headerText='About Me' icon={<BsInfoCircleFill size={40} />} />
-      <div className='about_content flex gap-[20px] p-[20px] w-[100%] '>
-        <div className='about_content_personalWrapper '> <Animate
+      <div className='about_content flex gap-[20px] p-[20px] w-[100%] flex-col md:flex-row '>
+        <div className='about_content_personalWrapper w-[100%] md:w-[50%] '> <Animate
           play
           duration={1.5}
           delay={0.1}
@@ -52,9 +52,9 @@ function About() {
         >
           <h3 className=' mb-[10px] font-[700] text-[2.5rem] text-[#4299e1]  '>Full Stack Web Developer</h3>
           <p className=' text-[1.8rem] leading-[-15.35rem] pb-[20px]   '>{aboutMe1}</p>
-          <p className=' text-[1.8rem] leading-[-15.35rem] pb-[20px]   '>{aboutMe2}</p>
+          {/* <p className=' text-[1.8rem] leading-[-15.35rem] pb-[20px]   '>{aboutMe2}</p>
           <p className=' text-[1.8rem] leading-[-15.35rem] pb-[20px]   '>{aboutMe3}</p>
-          <p className='lastP text-[1.8rem] leading-[-15.35rem] pb-[20px]    '>{aboutMe4}</p>
+          <p className='lastP text-[1.8rem] leading-[-15.35rem] pb-[20px]    '>{aboutMe4}</p> */}
 
         </Animate>
 
@@ -76,21 +76,33 @@ function About() {
                 personalDetails.map((item, i) => (
                   <li key={i} className=' leading-4 mb-10 flex '>
                     <span className='title text-[18px] font-[700] leading-[1px]  underline relative inline-block mr-[16px] pb-[1px]  '>{item.label} : </span>
-                    <span className="value text-[18px] font-[700] leading-[1px]  relative inline-block mr-[16px] pb-[5px]  ">{item.value}</span>
+                    <span className="value text-[18px] font-[700] leading-[1px]  relative inline-block mr-[16px] pb-[5px]   ">{item.value}</span>
                   </li>
                 ))
               }
             </ul>
           </Animate></div>
-        <div className='about_content_servicesWrapper flex justify-center items-start mt-36'>
-          <div className='about_content_servicesWrapper_innerContent rounded-full custom-radial-gradient w-[330px] h-[220px] md:w-[350px] md:h-[350px] '>
-            <div className='absolute top-[-9%] left-[41%] '><FaReact color='#4299e1' size={60} /> {/* React icon */}</div>
-            <div className='absolute right-[-8%] top-[41.5%] '><FaJs color='#4299e1' size={60} /> {/* JavaScript icon */}</div>
-            <div className='absolute bottom-[-10%] left-[41.5%]'><FaHtml5 color='#4299e1' size={60} /> {/* HTML5 icon */}</div>
-            <div className='absolute  left-[-8%] top-[41.5%]'><FaCss3Alt color='#4299e1' size={60} /> {/* CSS3 icon */}</div>
-            {/* <div className='absolute'><FaDev color='#4299e1' size={60} /></div> */}
-            {/*  <div className='absolute'><FaPython color='#4299e1' size={60} /> </div> */}
-          </div>
+        <div className='about_content_servicesWrapper  w-[100%] md:w-[50%] flex justify-center items-start mt-36'>
+          <Animate
+            play
+            duration={1.5}
+            delay={0.1}
+            start={{
+              transform: 'translateX(600px)'
+            }}
+            end={{
+              transform: 'translateX(0px)'
+            }}
+          >
+            <div className='about_content_servicesWrapper_innerContent rounded-full custom-radial-gradient  md:h-[350px] md:w-[350px] flex justify-center items-center md:-mt-37 '>
+              <div className='absolute top-[-9%] left-[41%] '><FaReact color='#4299e1' size={60} /> {/* React icon */}</div>
+              <div className='absolute right-[-8%] top-[41.5%] '><FaJs color='#4299e1' size={60} /> {/* JavaScript icon */}</div>
+              <div className='absolute bottom-[-10%] left-[41.5%]'><FaHtml5 color='#4299e1' size={60} /> {/* HTML5 icon */}</div>
+              <div className='absolute  left-[-8%] top-[41.5%]'><FaCss3Alt color='#4299e1' size={60} /> {/* CSS3 icon */}</div>
+              {/* <div className='absolute'><FaDev color='#4299e1' size={60} /></div> */}
+              {/*  <div className='absolute'><FaPython color='#4299e1' size={60} /> </div> */}
+            </div>
+          </Animate>
 
         </div>
       </div>

@@ -62,7 +62,7 @@ function App() {
       }
 
       {/* navbar */}
-      <Navbar />
+      <Navbar className=' bg-yellow-300' />
 
       <div className='App_main-page-content'>
         {/* main page content */}
