@@ -5,6 +5,7 @@ import raostore from "../../images/raostore.png";
 import raotask from "../../images/raotask.png";
 import raofoodapp from "../../images/raofoodapp.png";
 import raoamazon from "../../images/raoamazon.png";
+import rao25projects from '../../images/25projects.png'
 import "./styles.scss";
 import { useState } from "react";
 import PageHeaderContent from "../../components/pageHeader";
@@ -25,15 +26,21 @@ const portfolioData = [
 
   {
     id: 2,
-    name: "Food App",
+    name: "Food Recipe",
     image: raofoodapp,
     link: "https://raofoodapp.netlify.app/",
   },
   {
     id: 3,
-    name: "Amazon",
+    name: "Amazon clone",
     image: raoamazon,
     link: "https://rao-amazon.netlify.app/",
+  },
+  {
+    id: 2,
+    name: "25 Mini Projects",
+    image: rao25projects,
+    link: "https://rao25projects.netlify.app/",
   },
 ];
 
@@ -100,12 +107,14 @@ const Portfolio = () => {
         <div className="portfolio__content__cards grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item, index) => (
             <div
-              className="portfolio__content__cards__item"
+              className="portfolio__content__cards__item mb-[50px] "
               key={`cardItem${item.name.trim()}`}
               onMouseEnter={() => handleHover(index)}
               onMouseLeave={() => handleHover(null)}
             >
+
               <div className="portfolio__content__cards__item__img-wrapper">
+
                 <a>
                   <img alt={item.name} src={item.image} />
                 </a>
