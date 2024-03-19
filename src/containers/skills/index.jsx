@@ -1,5 +1,6 @@
 import React from 'react'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { MdLightbulbOutline } from 'react-icons/md'
+import { FaTools } from 'react-icons/fa';
 import PageHeaderContent from '../../components/pageHeader'
 import { skillsData } from './utils'
 import { Animate, AnimateKeyframes } from 'react-simple-animate'
@@ -11,7 +12,7 @@ const Skills = () => {
     <section id="skills" className="skills">
       <PageHeaderContent
         headerText="My Skills"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<FaTools size={40} />}
       />
       <div className="skills__content-wrapper">
         {skillsData.map((item, i) => (

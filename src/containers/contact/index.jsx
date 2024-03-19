@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { BsInfoCircleFill } from 'react-icons/bs'
+import { FaAddressBook } from 'react-icons/fa';
 import PageHeaderContent from '../../components/pageHeader'
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
@@ -39,7 +39,7 @@ function Contact() {
 
   return (
     <section id='contact' className='contact'>
-      <PageHeaderContent headerText='Contact' icon={<BsInfoCircleFill size={40} />} />
+      <PageHeaderContent headerText='Contact' icon={<FaAddressBook size={40} />} />
 
       <div className="contact_content">
         <Animate

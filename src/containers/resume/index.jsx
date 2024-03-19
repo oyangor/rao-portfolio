@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BsInfoCircleFill } from "react-icons/bs";
+import { FaFileAlt } from "react-icons/fa";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -16,7 +16,7 @@ const Resume = () => {
     <section id="resume" className="resume">
       <PageHeaderContent
         headerText="My Resume"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<FaFileAlt size={40} />}
       />
       <div className="timeline">
         <div className="timeline__experience">

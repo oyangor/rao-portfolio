@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import { BsInfoCircleFill } from "react-icons/bs";
+import { FaBriefcase } from "react-icons/fa";
 import raostore from "../../images/raostore.png";
 import raotask from "../../images/raotask.png";
 import raofoodapp from "../../images/raofoodapp.png";
@@ -83,7 +83,7 @@ const Portfolio = () => {
     <section id="portfolio" className="portfolio">
       <PageHeaderContent
         headerText="My Portfolio"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<FaBriefcase size={40} />}
       />
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">
