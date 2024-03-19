@@ -30,7 +30,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="w-full sticky flex md:justify-center justify-between items-center p-4 gradient-bg-transactions h-[100px] border-b text-[1.5rem] ">
+    <nav className=" z-20 w-full sticky flex md:justify-center justify-between items-center p-4 gradient-bg-transactions h-[100px] border-b text-[1.5rem] ">
       <div className="md:flex-[0.5] flex-initial justify-center items-center ">
         <Link to='/' ><img src={logo} alt="logo" className="w-[60px] cursor-pointer rounded-full " /></Link>
       </div>
@@ -50,10 +50,10 @@ const Navbar = () => {
         {toggleMenu && (
 
           <ul
-            className="ul-small   absolute -top-0 -right-2 p-3  h-screen w-[70vw] mt-[65px] shadow-2xl md:hidden list-none
-            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in bg-opacity-50 backdrop-filter backdrop-blur-lg"
+            className="z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+          flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
-
+            <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
             {data.map(
               (item, index) => <NavBarItem key={item + index} item={item} handleToggle={handleToggle} classprops="my-2 text-lg" />,
             )}

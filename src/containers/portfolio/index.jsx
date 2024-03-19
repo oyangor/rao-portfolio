@@ -97,7 +97,7 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-        <div className="portfolio__content__cards">
+        <div className="portfolio__content__cards grid-cols-1 md:grid-cols-3">
           {filteredItems.map((item, index) => (
             <div
               className="portfolio__content__cards__item"
